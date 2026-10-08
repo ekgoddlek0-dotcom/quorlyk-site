@@ -12,4 +12,4 @@ defaults:
     values: {layout: post}
   - scope: {path: ""}
     values: {layout: page}
-email: ""   # 대표님 확인 후 기재
+email: "quorlyk@daum.net"
