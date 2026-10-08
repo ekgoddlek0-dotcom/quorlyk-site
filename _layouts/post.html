@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign cats = "travel:여행,kpop:K팝,history:한국사" | split: "," %}
+{% for c in cats %}{% assign kv = c | split: ":" %}{% if kv[0] == page.category %}{% assign catname = kv[1] %}{% endif %}{% endfor %}
+<article class="doc post">
+  <p class="meta"><a href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ catname }}</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>{% if page.updated %} · 수정 {{ page.updated | date: '%Y.%m.%d' }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+  {{ content }}
+  {% if page.sources %}
+  <section class="sources">
+    <h2>참고한 자료</h2>
+    <ul>{% for s in page.sources %}<li><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.name }}</a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</article>

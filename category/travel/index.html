@@ -1,0 +1,9 @@
+---
+title: 여행
+---
+<p class="intro">서울 궁궐부터 지방 소도시까지, 실제로 가기 전에 알아야 할 운영 시간·이동 방법·관람 순서를 공식 자료 기준으로 정리합니다.</p>
+<ul class="list">
+{% for p in site.posts %}{% if p.category == "travel" %}
+  <li><a class="t" href="{{ p.url | relative_url }}">{{ p.title }}</a><p>{{ p.summary }}</p></li>
+{% endif %}{% endfor %}
+</ul>

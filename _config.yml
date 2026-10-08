@@ -1,0 +1,15 @@
+title: 쿼릭 Quorlyk
+description: 한국 여행, K팝, 한국사를 직접 확인한 사실로 쉽게 정리하는 정보 사이트
+url: https://quorlyk.com
+lang: ko
+permalink: /:title/
+timezone: Asia/Seoul
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+  - scope: {path: ""}
+    values: {layout: page}
+email: ""   # 대표님 확인 후 기재

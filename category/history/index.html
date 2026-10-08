@@ -1,0 +1,9 @@
+---
+title: 한국사
+---
+<p class="intro">교과서에서 짧게 지나간 사건과 인물을 1차 자료와 공공기관 자료로 확인해 풀어 씁니다.</p>
+<ul class="list">
+{% for p in site.posts %}{% if p.category == "history" %}
+  <li><a class="t" href="{{ p.url | relative_url }}">{{ p.title }}</a><p>{{ p.summary }}</p></li>
+{% endif %}{% endfor %}
+</ul>
