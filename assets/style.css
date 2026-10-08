@@ -1,9 +1,10 @@
-/* 쿼릭 디자인 토큰. 강조색은 단청 주홍 하나만. 모서리: 카드·그림 16px, 버튼은 알약형(전체 둥글게). */
+/* 쿼릭 디자인 토큰. 강조색은 단청 주홍 하나만. 2026-10-08 Notion DESIGN.md(../디자인/notion.md) 원칙 적용:
+   따뜻한 종이 바탕 + 흰 카드, 그림자 대신 1px 실선, 카드 12px·버튼 8px·태그만 알약형, 큰 제목은 자간 좁게. */
 :root {
-  --bg: #f6f6f4; --surface: #ffffff; --ink: #16191d; --ink-2: #4a525c; --muted: #6b737d;
+  --bg: #f6f5f4; --surface: #ffffff; --ink: #16191d; --ink-2: #4a525c; --muted: #6b737d;
   --line: #e2e4e7; --accent: #c2412d; --accent-ink: #ffffff; --accent-soft: #fbe9e5;
   --travel: #e7eef5; --kpop: #f3e8f0; --history: #efece4;
-  --r: 16px; --shadow: 0 1px 2px rgb(22 25 29 / .05), 0 8px 24px rgb(22 25 29 / .06);
+  --r: 12px; --shadow: 0 0 0 1px rgb(0 0 0 / .08);
   --tab-h: 64px;
   color-scheme: light;
 }
@@ -12,7 +13,7 @@
     --bg: #121417; --surface: #1a1d21; --ink: #ecedef; --ink-2: #c3c8ce; --muted: #9aa2ab;
     --line: #2a2e34; --accent: #ef7a5f; --accent-ink: #1a0e0b; --accent-soft: #3a211c;
     --travel: #1d2630; --kpop: #2a1f28; --history: #26241e;
-    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
+    --shadow: 0 0 0 1px rgb(255 255 255 / .08);
     color-scheme: dark;
   }
 }
@@ -20,7 +21,7 @@
   --bg: #121417; --surface: #1a1d21; --ink: #ecedef; --ink-2: #c3c8ce; --muted: #9aa2ab;
   --line: #2a2e34; --accent: #ef7a5f; --accent-ink: #1a0e0b; --accent-soft: #3a211c;
   --travel: #1d2630; --kpop: #2a1f28; --history: #26241e;
-  --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
+  --shadow: 0 0 0 1px rgb(255 255 255 / .08);
   color-scheme: dark;
 }
 
@@ -217,3 +218,9 @@ body { padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom)); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Notion 원칙: 버튼은 8px 모서리(알약형은 태그·칩만), 큰 제목은 음수 자간, 움직임은 200ms */
+.btn, .btn-pill { border-radius: 8px; transition: border-color .2s ease, background .2s ease; }
+.hero h1 { letter-spacing: -0.035em; }
+.sec-h, .card-big h3 { letter-spacing: -0.03em; }
+.card-img { border-radius: 8px; }
