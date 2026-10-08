@@ -2,25 +2,78 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
 {% seo %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% if page.image %}<link rel="preload" as="image" href="{{ page.image | replace: '.webp', '-sm.webp' | relative_url }}" media="(max-width: 720px)">{% endif %}
 </head>
-<body>
+<body class="{% if page.layout == 'post' %}is-post{% endif %}">
+{% if page.layout == 'post' %}<div class="progress" aria-hidden="true"></div>{% endif %}
 <header class="top">
-  <a class="brand" href="{{ '/' | relative_url }}">쿼릭<span>Quorlyk</span></a>
-  <nav>
-    <a href="{{ '/category/travel/' | relative_url }}">여행</a>
-    <a href="{{ '/category/kpop/' | relative_url }}">K팝</a>
-    <a href="{{ '/category/history/' | relative_url }}">한국사</a>
-    <a href="{{ '/about/' | relative_url }}">소개</a>
-  </nav>
+  <div class="top-in">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="쿼릭 첫 화면">
+      <span class="mark" aria-hidden="true">쿼</span><span class="brand-t">쿼릭<small>Quorlyk</small></span>
+    </a>
+    <nav class="nav-desk" aria-label="주요 메뉴">
+      {% assign here = page.category | default: page.cat %}
+      <a href="{{ '/category/travel/' | relative_url }}" {% if here == 'travel' %}aria-current="page"{% endif %}><i class="ph ph-map-trifold"></i>여행</a>
+      <a href="{{ '/category/kpop/' | relative_url }}" {% if here == 'kpop' %}aria-current="page"{% endif %}><i class="ph ph-microphone-stage"></i>K팝</a>
+      <a href="{{ '/category/history/' | relative_url }}" {% if here == 'history' %}aria-current="page"{% endif %}><i class="ph ph-scroll"></i>한국사</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}><i class="ph ph-info"></i>소개</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="화면 밝기 바꾸기"><i class="ph ph-moon"></i></button>
+  </div>
 </header>
-<main>{{ content }}</main>
+
+<main id="main">{{ content }}</main>
+
 <footer class="foot">
-  <p>© {{ site.time | date: '%Y' }} 쿼릭 Quorlyk</p>
-  <p><a href="{{ '/about/' | relative_url }}">소개</a> · <a href="{{ '/contact/' | relative_url }}">문의</a> · <a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a> · <a href="{{ '/terms/' | relative_url }}">이용약관</a></p>
+  <div class="foot-in">
+    <p class="foot-brand">쿼릭 Quorlyk</p>
+    <p>한국 여행, K팝, 한국사를 공식 자료로 확인해 정리합니다.</p>
+    <p class="foot-links">
+      <a href="{{ '/about/' | relative_url }}">소개</a>
+      <a href="{{ '/contact/' | relative_url }}">문의</a>
+      <a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a>
+      <a href="{{ '/terms/' | relative_url }}">이용약관</a>
+    </p>
+    <p class="foot-copy">© {{ site.time | date: '%Y' }} 쿼릭</p>
+  </div>
 </footer>
+
+<nav class="tabbar" aria-label="하단 메뉴">
+  {% assign here = page.category | default: page.cat %}
+  <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}><i class="ph ph-house"></i><span>홈</span></a>
+  <a href="{{ '/category/travel/' | relative_url }}" {% if here == 'travel' %}aria-current="page"{% endif %}><i class="ph ph-map-trifold"></i><span>여행</span></a>
+  <a href="{{ '/category/kpop/' | relative_url }}" {% if here == 'kpop' %}aria-current="page"{% endif %}><i class="ph ph-microphone-stage"></i><span>K팝</span></a>
+  <a href="{{ '/category/history/' | relative_url }}" {% if here == 'history' %}aria-current="page"{% endif %}><i class="ph ph-scroll"></i><span>한국사</span></a>
+</nav>
+
+<button class="to-top" id="top" type="button" aria-label="맨 위로"><i class="ph ph-arrow-up"></i></button>
+
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('theme');
+  function dark() { return root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
+  function icon() { btn.innerHTML = dark() ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>'; }
+  icon();
+  btn.addEventListener('click', function () {
+    root.dataset.theme = dark() ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    icon();
+  });
+  var top = document.getElementById('top');
+  top.addEventListener('click', function () { scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); });
+  var sentinel = document.createElement('div'); sentinel.style.cssText = 'position:absolute;top:900px;height:1px;width:1px';
+  document.body.appendChild(sentinel);
+  new IntersectionObserver(function (e) { top.classList.toggle('show', e[0].boundingClientRect.top < 0); }).observe(sentinel);
+})();
+</script>
 </body>
 </html>

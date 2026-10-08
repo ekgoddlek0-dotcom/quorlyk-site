@@ -1,17 +1,78 @@
 ---
 layout: default
 ---
-{% assign cats = "travel:여행,kpop:K팝,history:한국사" | split: "," %}
-{% for c in cats %}{% assign kv = c | split: ":" %}{% if kv[0] == page.category %}{% assign catname = kv[1] %}{% endif %}{% endfor %}
-<article class="doc post">
-  <p class="meta"><a href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ catname }}</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>{% if page.updated %} · 수정 {{ page.updated | date: '%Y.%m.%d' }}{% endif %}</p>
-  <h1>{{ page.title }}</h1>
-  {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
-  {{ content }}
-  {% if page.sources %}
-  <section class="sources">
-    <h2>참고한 자료</h2>
-    <ul>{% for s in page.sources %}<li><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.name }}</a></li>{% endfor %}</ul>
-  </section>
+{% assign catname = site.data.cats[page.category].name %}
+{% assign mins = content | strip_html | size | divided_by: 550 | plus: 1 %}
+<article class="post">
+  <header class="post-head wrap">
+    <a class="chip" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ catname }}</a>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+    <p class="meta">
+      <span><i class="ph ph-calendar-blank"></i><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time></span>
+      {% if page.updated %}<span><i class="ph ph-arrows-clockwise"></i>수정 {{ page.updated | date: '%Y.%m.%d' }}</span>{% endif %}
+      <span><i class="ph ph-clock"></i>{{ mins }}분</span>
+    </p>
+  </header>
+
+  {% if page.image %}
+  <figure class="post-hero">
+    <picture>
+      <source media="(max-width: 720px)" srcset="{{ page.image | replace: '.webp', '-sm.webp' | relative_url }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1600" height="{{ page.image_h | default: 900 }}">
+    </picture>
+    {% if page.image_credit %}<figcaption>{{ page.image_credit }}</figcaption>{% endif %}
+  </figure>
   {% endif %}
+
+  <div class="post-body wrap">
+    <details class="toc" id="toc" open hidden>
+      <summary><i class="ph ph-list-bullets"></i>이 글의 순서</summary>
+      <ol></ol>
+    </details>
+
+    <div class="prose">{{ content }}</div>
+
+    {% if page.sources %}
+    <section class="sources">
+      <h2>참고한 자료</h2>
+      <ul>{% for s in page.sources %}<li><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.name }}<i class="ph ph-arrow-up-right"></i></a></li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+
+    <div class="share">
+      <span>이 글이 도움이 됐다면</span>
+      <button type="button" class="btn" id="share"><i class="ph ph-share-network"></i>공유하기</button>
+    </div>
+
+    <nav class="pager" aria-label="다른 글">
+      {% if page.previous %}<a class="pager-a" href="{{ page.previous.url | relative_url }}"><small>이전 글</small>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+      {% if page.next %}<a class="pager-a next" href="{{ page.next.url | relative_url }}"><small>다음 글</small>{{ page.next.title }}</a>{% endif %}
+    </nav>
+  </div>
 </article>
+
+<script>
+(function () {
+  var hs = document.querySelectorAll('.prose h2'), toc = document.getElementById('toc');
+  if (hs.length >= 3) {
+    var ol = toc.querySelector('ol');
+    hs.forEach(function (h, i) {
+      h.id = h.id || 's' + (i + 1);
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = '#' + h.id; a.textContent = h.textContent; li.appendChild(a); ol.appendChild(li);
+    });
+    toc.hidden = false;
+    if (matchMedia('(max-width: 720px)').matches) toc.open = false;
+  }
+  var b = document.getElementById('share');
+  b.addEventListener('click', function () {
+    var d = { title: document.title, url: location.href };
+    if (navigator.share) { navigator.share(d).catch(function () {}); return; }
+    navigator.clipboard.writeText(location.href).then(function () {
+      b.innerHTML = '<i class="ph ph-check"></i>주소 복사됨';
+      setTimeout(function () { b.innerHTML = '<i class="ph ph-share-network"></i>공유하기'; }, 2000);
+    });
+  });
+})();
+</script>

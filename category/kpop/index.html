@@ -1,9 +1,19 @@
 ---
+layout: default
+cat: kpop
 title: K팝
 ---
-<p class="intro">K팝의 역사와 산업 구조, 용어와 문화를 처음 접하는 사람도 이해할 수 있게 설명합니다.</p>
-<ul class="list">
-{% for p in site.posts %}{% if p.category == "kpop" %}
-  <li><a class="t" href="{{ p.url | relative_url }}">{{ p.title }}</a><p>{{ p.summary }}</p></li>
-{% endif %}{% endfor %}
-</ul>
+{% assign c = site.data.cats["kpop"] %}
+{% assign posts = site.posts | where: "category", "kpop" %}
+<section class="cat-head wrap-wide cat-kpop">
+  <i class="ph {{ c.icon }}"></i>
+  <h1>{{ c.name }}</h1>
+  <p>{{ c.desc }}</p>
+</section>
+<section class="wrap-wide">
+  {% if posts.size > 0 %}
+  <div class="card-grid">{% for p in posts %}{% include card.html post=p %}{% endfor %}</div>
+  {% else %}
+  <div class="empty-state"><i class="ph {{ c.icon }}"></i><p>첫 글을 준비하고 있습니다. 다른 주제의 글을 먼저 둘러보세요.</p><a class="btn" href="{{ '/' | relative_url }}">첫 화면으로</a></div>
+  {% endif %}
+</section>
