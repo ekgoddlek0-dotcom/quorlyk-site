@@ -2,58 +2,79 @@
 layout: default
 title: 돈·지원금·생활정보 공식 자료 정리
 ---
-{% assign money = site.posts | where: "category", "money" %}
-<section class="hero wrap-wide">
-  <div class="hero-t">
-    <h1>받을 수 있는 돈,<br><b>놓치지 않게</b></h1>
-    <p>지원금·세금·연금부터 생활 절차까지, 정부·공공기관 자료로 확인한 내용만 쉽게 정리합니다.</p>
-    <div class="hero-btns">
-      <a class="btn btn-primary" href="{{ '/category/money/' | relative_url }}"><i class="ph ph-coins"></i>돈·지원금 보기</a>
-      <a class="btn" href="{{ '/category/life/' | relative_url }}">생활정보</a>
+{% assign first = site.posts.first %}
+{% assign nsrc = 0 %}{% for p in site.posts %}{% assign nsrc = nsrc | plus: p.sources.size %}{% endfor %}
+<section class="lead">
+  <div class="wrap-wide lead-grid">
+    <div>
+      <span class="label">돈 · 지원금 · 생활 절차</span>
+      <h1>받을 수 있는 돈,<br><mark>놓치지 않게.</mark></h1>
+      <p class="sub">지원금·세금·연금부터 생활 절차까지, 정부·공공기관 자료로 확인한 내용만 쉽게 정리합니다.</p>
+      <div class="lead-btns">
+        <a class="btn btn-primary" href="{{ '/category/money/' | relative_url }}">돈·지원금 정보 보기<i class="ph ph-arrow-right"></i></a>
+        <a class="btn" href="{{ '/category/life/' | relative_url }}">생활정보</a>
+      </div>
+      <div class="lead-stats" aria-label="사이트 현황">
+        <div><b>{{ site.posts.size }}</b><span>정리한 글</span></div>
+        <div><b>{{ nsrc }}</b><span>확인한 공식 출처</span></div>
+        <div><b>{{ site.time | date: '%m.%d' }}</b><span>마지막 업데이트</span></div>
+      </div>
     </div>
-  </div>
-  <figure class="hero-img">
-    <picture>
-      <source media="(max-width: 720px)" srcset="{{ '/assets/img/home-desk-sm.webp' | relative_url }}">
-      <img src="{{ '/assets/img/home-desk.webp' | relative_url }}" alt="밝은 책상 위에 놓인 계산기, 펜, 서류와 커피잔" width="1600" height="1200" fetchpriority="high">
-    </picture>
-  </figure>
-</section>
-
-<section class="trust" aria-label="쿼릭이 글을 만드는 원칙">
-  <div class="trust-in">
-    <div class="trust-i"><i class="ph ph-seal-check"></i><div><strong>공식 자료만 씁니다</strong><span>국세청·정부24·공단 등 공공기관 자료를 확인하고, 글 끝에 출처를 모두 밝힙니다.</span></div></div>
-    <div class="trust-i"><i class="ph ph-calendar-check"></i><div><strong>확인한 날짜를 적습니다</strong><span>금액과 기준은 해마다 바뀌어서, 언제 기준인지 글마다 표시합니다.</span></div></div>
-    <div class="trust-i"><i class="ph ph-pencil-simple-line"></i><div><strong>틀리면 바로 고칩니다</strong><span>오류를 알려 주시면 확인 후 고치고 수정 날짜를 남깁니다.</span></div></div>
-  </div>
-</section>
-
-<section class="latest wrap-wide">
-  <h2 class="sec-h">새로 올라온 글</h2>
-  {% assign first = site.posts.first %}
-  <div class="latest-grid">
-    {% include card.html post=first big=true %}
-    <div class="latest-rest">
-      {% for p in site.posts offset:1 limit:5 %}{% include card.html post=p %}{% endfor %}
-      {% if site.posts.size < 2 %}<p class="empty">곧 새 글이 올라옵니다.</p>{% endif %}
+    <div>
+      <ol class="ranked" aria-label="새로 올라온 글">
+        <li style="counter-increment:none"><h2 class="label">새로 올라온 글</h2></li>
+        {% for p in site.posts offset:1 limit:5 %}
+        <li><a href="{{ p.url | relative_url }}"><span><strong>{{ p.title }}</strong><small>{{ site.data.cats[p.category].name }} · {{ p.date | date: '%Y.%m.%d' }}</small></span></a></li>
+        {% endfor %}
+      </ol>
     </div>
   </div>
 </section>
 
-<section class="cats wrap-wide">
-  <h2 class="sec-h">주제별로 보기</h2>
-  <div class="cat-grid">
-    {% assign keys = "money,life,travel" | split: "," %}
-    {% for key in keys %}
-    {% assign c = site.data.cats[key] %}
-    {% assign n = site.posts | where: "category", key | size %}
-    <a class="cat-tile" href="{{ '/category/' | append: key | append: '/' | relative_url }}">
-      <i class="ph {{ c.icon }}"></i>
-      <strong>{{ c.name }}</strong>
-      <span>{{ c.desc }}</span>
-      <em>{% if n > 0 %}글 {{ n }}편 보기{% else %}새 글 준비 중{% endif %}<i class="ph ph-arrow-right"></i></em>
-    </a>
-    {% endfor %}
+{% if first %}
+<section class="feature wrap-wide" aria-label="대표 글">
+  <a href="{{ first.url | relative_url }}">
+    <figure>{% if first.image %}<img src="{{ first.image | relative_url }}" alt="{{ first.image_alt }}" width="1600" height="1000" fetchpriority="high">{% endif %}</figure>
+    <div>
+      <span class="chip">{{ site.data.cats[first.category].name }}</span>
+      <h2>{{ first.title }}</h2>
+      <p>{{ first.summary }}</p>
+      <span class="read">끝까지 읽기<i class="ph ph-arrow-right"></i></span>
+    </div>
+  </a>
+</section>
+{% endif %}
+
+<section class="band" aria-label="쿼릭이 글을 쓰는 방식">
+  <div class="wrap-wide band-grid">
+    <div>
+      <span class="label">쿼릭이 글을 쓰는 방식</span>
+      <h2>추측 대신 <mark>공식 자료</mark>로, 날짜까지 적어서.</h2>
+    </div>
+    <ol>
+      <li><div><strong>공식 자료만 씁니다</strong><span>국세청·정부24·공단 등 공공기관 자료를 확인하고, 글 끝에 출처를 모두 밝힙니다.</span></div></li>
+      <li><div><strong>확인한 날짜를 적습니다</strong><span>금액과 기준은 해마다 바뀌어서, 언제 기준인지 글마다 표시합니다.</span></div></li>
+      <li><div><strong>틀리면 바로 고칩니다</strong><span>오류를 알려 주시면 확인 후 고치고 수정 날짜를 남깁니다. <a href="{{ '/contact/' | relative_url }}">오류 알리기</a></span></div></li>
+    </ol>
   </div>
+</section>
+
+{% assign keys = "money,life,travel" | split: "," %}
+{% for key in keys %}
+{% assign c = site.data.cats[key] %}
+{% assign ps = site.posts | where: "category", key %}
+{% if ps.size > 0 %}
+<section class="shelf wrap-wide">
+  <div class="shelf-h">
+    <h2>{{ c.name }}</h2>
+    <p>{{ c.desc | truncate: 48 }}</p>
+    <a href="{{ '/category/' | append: key | append: '/' | relative_url }}">전체 {{ ps.size }}편<i class="ph ph-arrow-right"></i></a>
+  </div>
+  <div class="card-grid">{% for p in ps limit: 3 %}{% include card.html post=p %}{% endfor %}</div>
+</section>
+{% endif %}
+{% endfor %}
+
+<section class="wrap-wide">
   <p class="more-topics">처음 다루던 주제도 계속 볼 수 있어요.<a href="{{ '/category/kpop/' | relative_url }}">K팝</a><a href="{{ '/category/history/' | relative_url }}">한국사</a></p>
 </section>

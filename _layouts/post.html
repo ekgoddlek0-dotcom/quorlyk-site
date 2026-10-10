@@ -26,12 +26,12 @@ layout: default
   </figure>
   {% endif %}
 
-  <div class="post-body wrap">
+  <div class="post-grid">
     <details class="toc" id="toc" open hidden>
       <summary><i class="ph ph-list-bullets"></i>이 글의 순서</summary>
       <ol></ol>
     </details>
-
+    <div class="post-main">
     <div class="prose">{{ content }}</div>
 
     {% if page.sources %}
@@ -57,6 +57,7 @@ layout: default
       {% if page.previous %}<a class="pager-a" href="{{ page.previous.url | relative_url }}"><small>이전 글</small>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
       {% if page.next %}<a class="pager-a next" href="{{ page.next.url | relative_url }}"><small>다음 글</small>{{ page.next.title }}</a>{% endif %}
     </nav>
+    </div>
   </div>
 </article>
 
@@ -72,6 +73,11 @@ layout: default
     });
     toc.hidden = false;
     if (matchMedia('(max-width: 720px)').matches) toc.open = false;
+    var links = ol.querySelectorAll('a');   // 지금 읽는 소제목 표시
+    var io2 = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id); }); });
+    }, { rootMargin: '0px 0px -70% 0px' });
+    hs.forEach(function (h) { io2.observe(h); });
   }
   var b = document.getElementById('share');
   b.addEventListener('click', function () {
