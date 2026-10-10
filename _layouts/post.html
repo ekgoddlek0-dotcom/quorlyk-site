@@ -45,6 +45,13 @@ layout: default
       <button type="button" class="btn" id="share"><i class="ph ph-share-network"></i>공유하기</button>
     </div>
 
+    {% assign rel = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" %}
+    {% assign more = site.posts | where_exp: "p", "p.category != page.category" %}
+    <section class="related" aria-label="함께 보면 좋은 글">
+      <h2>함께 보면 좋은 글</h2>
+      <div class="grid">{% for p in rel limit: 4 %}{% include card.html post=p %}{% endfor %}{% assign left = 4 | minus: rel.size %}{% if left > 0 %}{% for p in more limit: left %}{% include card.html post=p %}{% endfor %}{% endif %}</div>
+    </section>
+
     <nav class="pager" aria-label="다른 글">
       {% if page.previous %}<a class="pager-a" href="{{ page.previous.url | relative_url }}"><small>이전 글</small>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
       {% if page.next %}<a class="pager-a next" href="{{ page.next.url | relative_url }}"><small>다음 글</small>{{ page.next.title }}</a>{% endif %}

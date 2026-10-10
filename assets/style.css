@@ -224,3 +224,8 @@ body { padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom)); }
 .hero h1 { letter-spacing: -0.035em; }
 .sec-h, .card-big h3 { letter-spacing: -0.03em; }
 .card-img { border-radius: 8px; }
+/* 함께 보면 좋은 글 — 글 끝에서 다음 글로 한 번에 (2026-10-10) */
+.related { margin-top: 40px; padding-top: 8px; border-top: 1px solid var(--line); }
+.related h2 { font-size: 18px; margin: 20px 0 12px; }
+.related .grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 720px) { .related .grid { grid-template-columns: 1fr; } }
