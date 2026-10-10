@@ -1,21 +1,31 @@
 ---
 layout: default
-title: 돈·지원금·생활정보·여행 공식 정보 정리
+title: 돈·지원금·생활정보 공식 자료 정리
 ---
+{% assign money = site.posts | where: "category", "money" %}
 <section class="hero wrap-wide">
   <div class="hero-t">
-    <h1>찾아보면 받을 수 있는 돈, 헷갈리는 절차를 공식 자료로</h1>
-    <p>지원금·세금·연금부터 여권·전입신고·여행 준비까지, 정부·공공기관 자료로 확인한 내용만 짧고 정확하게 정리합니다.</p>
+    <h1>받을 수 있는 돈,<br><b>놓치지 않게</b></h1>
+    <p>지원금·세금·연금부터 생활 절차까지, 정부·공공기관 자료로 확인한 내용만 쉽게 정리합니다.</p>
     <div class="hero-btns">
-      {% for c in site.data.cats %}<a class="btn btn-pill" href="{{ '/category/' | append: c[0] | append: '/' | relative_url }}"><i class="ph {{ c[1].icon }}"></i>{{ c[1].name }}</a>{% endfor %}
+      <a class="btn btn-primary" href="{{ '/category/money/' | relative_url }}"><i class="ph ph-coins"></i>돈·지원금 보기</a>
+      <a class="btn" href="{{ '/category/life/' | relative_url }}">생활정보</a>
     </div>
   </div>
   <figure class="hero-img">
     <picture>
-      <source media="(max-width: 720px)" srcset="{{ '/assets/img/changdeokgung-sm.webp' | relative_url }}">
-      <img src="{{ '/assets/img/changdeokgung.webp' | relative_url }}" alt="창덕궁 인정전과 넓은 앞마당" width="1600" height="1067" fetchpriority="high">
+      <source media="(max-width: 720px)" srcset="{{ '/assets/img/home-desk-sm.webp' | relative_url }}">
+      <img src="{{ '/assets/img/home-desk.webp' | relative_url }}" alt="밝은 책상 위에 놓인 계산기, 펜, 서류와 커피잔" width="1600" height="1200" fetchpriority="high">
     </picture>
   </figure>
+</section>
+
+<section class="trust" aria-label="쿼릭이 글을 만드는 원칙">
+  <div class="trust-in">
+    <div class="trust-i"><i class="ph ph-seal-check"></i><div><strong>공식 자료만 씁니다</strong><span>국세청·정부24·공단 등 공공기관 자료를 확인하고, 글 끝에 출처를 모두 밝힙니다.</span></div></div>
+    <div class="trust-i"><i class="ph ph-calendar-check"></i><div><strong>확인한 날짜를 적습니다</strong><span>금액과 기준은 해마다 바뀌어서, 언제 기준인지 글마다 표시합니다.</span></div></div>
+    <div class="trust-i"><i class="ph ph-pencil-simple-line"></i><div><strong>틀리면 바로 고칩니다</strong><span>오류를 알려 주시면 확인 후 고치고 수정 날짜를 남깁니다.</span></div></div>
+  </div>
 </section>
 
 <section class="latest wrap-wide">
@@ -33,14 +43,17 @@ title: 돈·지원금·생활정보·여행 공식 정보 정리
 <section class="cats wrap-wide">
   <h2 class="sec-h">주제별로 보기</h2>
   <div class="cat-grid">
-    {% for c in site.data.cats %}
-    {% assign n = site.posts | where: "category", c[0] | size %}
-    <a class="cat-tile cat-{{ c[0] }}" href="{{ '/category/' | append: c[0] | append: '/' | relative_url }}">
-      <i class="ph {{ c[1].icon }}"></i>
-      <strong>{{ c[1].name }}</strong>
-      <span>{{ c[1].desc }}</span>
-      <em>{% if n > 0 %}글 {{ n }}편{% else %}준비 중{% endif %}<i class="ph ph-arrow-right"></i></em>
+    {% assign keys = "money,life,travel" | split: "," %}
+    {% for key in keys %}
+    {% assign c = site.data.cats[key] %}
+    {% assign n = site.posts | where: "category", key | size %}
+    <a class="cat-tile" href="{{ '/category/' | append: key | append: '/' | relative_url }}">
+      <i class="ph {{ c.icon }}"></i>
+      <strong>{{ c.name }}</strong>
+      <span>{{ c.desc }}</span>
+      <em>{% if n > 0 %}글 {{ n }}편 보기{% else %}새 글 준비 중{% endif %}<i class="ph ph-arrow-right"></i></em>
     </a>
     {% endfor %}
   </div>
+  <p class="more-topics">처음 다루던 주제도 계속 볼 수 있어요.<a href="{{ '/category/kpop/' | relative_url }}">K팝</a><a href="{{ '/category/history/' | relative_url }}">한국사</a></p>
 </section>
