@@ -1,3 +1,11 @@
+money:
+  name: 돈·지원금
+  icon: ph-coins
+  desc: 정부지원금·세금·연금·보험·신용점수처럼 내 돈과 직결되는 제도를 정부·공공기관 공식 자료로 정리합니다.
+life:
+  name: 생활정보
+  icon: ph-house-line
+  desc: 여권·운전면허·전입신고·공과금처럼 살면서 한 번은 꼭 찾아보는 절차를 단계별로 정리합니다.
 travel:
   name: 여행
   icon: ph-map-trifold

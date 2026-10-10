@@ -3,7 +3,7 @@
 :root {
   --bg: #f6f5f4; --surface: #ffffff; --ink: #16191d; --ink-2: #4a525c; --muted: #6b737d;
   --line: #e2e4e7; --accent: #c2412d; --accent-ink: #ffffff; --accent-soft: #fbe9e5;
-  --travel: #e7eef5; --kpop: #f3e8f0; --history: #efece4;
+  --travel: #e7eef5; --kpop: #f3e8f0; --history: #efece4; --money: #e8f2ea; --life: #f4efe4;
   --r: 12px; --shadow: 0 0 0 1px rgb(0 0 0 / .08);
   --tab-h: 64px;
   color-scheme: light;
@@ -12,7 +12,7 @@
   :root:not([data-theme="light"]) {
     --bg: #121417; --surface: #1a1d21; --ink: #ecedef; --ink-2: #c3c8ce; --muted: #9aa2ab;
     --line: #2a2e34; --accent: #ef7a5f; --accent-ink: #1a0e0b; --accent-soft: #3a211c;
-    --travel: #1d2630; --kpop: #2a1f28; --history: #26241e;
+    --travel: #1d2630; --kpop: #2a1f28; --history: #26241e; --money: #1c2a20; --life: #29251d;
     --shadow: 0 0 0 1px rgb(255 255 255 / .08);
     color-scheme: dark;
   }
@@ -20,7 +20,7 @@
 :root[data-theme="dark"] {
   --bg: #121417; --surface: #1a1d21; --ink: #ecedef; --ink-2: #c3c8ce; --muted: #9aa2ab;
   --line: #2a2e34; --accent: #ef7a5f; --accent-ink: #1a0e0b; --accent-soft: #3a211c;
-  --travel: #1d2630; --kpop: #2a1f28; --history: #26241e;
+  --travel: #1d2630; --kpop: #2a1f28; --history: #26241e; --money: #1c2a20; --life: #29251d;
   --shadow: 0 0 0 1px rgb(255 255 255 / .08);
   color-scheme: dark;
 }
@@ -122,7 +122,7 @@ body { padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom)); }
 .cat-tile strong { font-size: 20px; }
 .cat-tile span { font-size: 15px; color: var(--ink-2); line-height: 1.6; }
 .cat-tile em { font-style: normal; font-size: 14px; font-weight: 700; color: var(--accent); display: inline-flex; gap: 6px; align-items: center; margin-top: 6px; }
-.cat-travel { background: var(--travel); } .cat-kpop { background: var(--kpop); } .cat-history { background: var(--history); }
+.cat-travel { background: var(--travel); } .cat-kpop { background: var(--kpop); } .cat-history { background: var(--history); } .cat-money { background: var(--money); } .cat-life { background: var(--life); }
 
 /* 카테고리 */
 .cat-head { padding-top: 36px; padding-bottom: 8px; }

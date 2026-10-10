@@ -1,0 +1,19 @@
+---
+layout: default
+cat: life
+title: 생활정보
+---
+{% assign c = site.data.cats["life"] %}
+{% assign posts = site.posts | where: "category", "life" %}
+<section class="cat-head wrap-wide cat-life">
+  <i class="ph {{ c.icon }}"></i>
+  <h1>{{ c.name }}</h1>
+  <p>{{ c.desc }}</p>
+</section>
+<section class="wrap-wide">
+  {% if posts.size > 0 %}
+  <div class="card-grid">{% for p in posts %}{% include card.html post=p %}{% endfor %}</div>
+  {% else %}
+  <div class="empty-state"><i class="ph {{ c.icon }}"></i><p>첫 글을 준비하고 있습니다. 다른 주제의 글을 먼저 둘러보세요.</p><a class="btn" href="{{ '/' | relative_url }}">첫 화면으로</a></div>
+  {% endif %}
+</section>

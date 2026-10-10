@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 한국 여행·K팝·한국사 정보
+title: 돈·지원금·생활정보·여행 공식 정보 정리
 ---
 <section class="hero wrap-wide">
   <div class="hero-t">
-    <h1>한국을 제대로 알고 가는 가장 쉬운 방법</h1>
-    <p>궁궐 휴궁일부터 한글의 탄생까지, 공식 자료로 확인한 내용만 짧고 정확하게 정리합니다.</p>
+    <h1>찾아보면 받을 수 있는 돈, 헷갈리는 절차를 공식 자료로</h1>
+    <p>지원금·세금·연금부터 여권·전입신고·여행 준비까지, 정부·공공기관 자료로 확인한 내용만 짧고 정확하게 정리합니다.</p>
     <div class="hero-btns">
       {% for c in site.data.cats %}<a class="btn btn-pill" href="{{ '/category/' | append: c[0] | append: '/' | relative_url }}"><i class="ph {{ c[1].icon }}"></i>{{ c[1].name }}</a>{% endfor %}
     </div>

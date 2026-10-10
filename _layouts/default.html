@@ -22,9 +22,9 @@
     </a>
     <nav class="nav-desk" aria-label="주요 메뉴">
       {% assign here = page.category | default: page.cat %}
+      <a href="{{ '/category/money/' | relative_url }}" {% if here == 'money' %}aria-current="page"{% endif %}><i class="ph ph-coins"></i>돈·지원금</a>
+      <a href="{{ '/category/life/' | relative_url }}" {% if here == 'life' %}aria-current="page"{% endif %}><i class="ph ph-house-line"></i>생활정보</a>
       <a href="{{ '/category/travel/' | relative_url }}" {% if here == 'travel' %}aria-current="page"{% endif %}><i class="ph ph-map-trifold"></i>여행</a>
-      <a href="{{ '/category/kpop/' | relative_url }}" {% if here == 'kpop' %}aria-current="page"{% endif %}><i class="ph ph-microphone-stage"></i>K팝</a>
-      <a href="{{ '/category/history/' | relative_url }}" {% if here == 'history' %}aria-current="page"{% endif %}><i class="ph ph-scroll"></i>한국사</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}><i class="ph ph-info"></i>소개</a>
     </nav>
     <button class="icon-btn" id="theme" type="button" aria-label="화면 밝기 바꾸기"><i class="ph ph-moon"></i></button>
@@ -50,9 +50,9 @@
 <nav class="tabbar" aria-label="하단 메뉴">
   {% assign here = page.category | default: page.cat %}
   <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}><i class="ph ph-house"></i><span>홈</span></a>
+  <a href="{{ '/category/money/' | relative_url }}" {% if here == 'money' %}aria-current="page"{% endif %}><i class="ph ph-coins"></i><span>돈·지원금</span></a>
+  <a href="{{ '/category/life/' | relative_url }}" {% if here == 'life' %}aria-current="page"{% endif %}><i class="ph ph-house-line"></i><span>생활정보</span></a>
   <a href="{{ '/category/travel/' | relative_url }}" {% if here == 'travel' %}aria-current="page"{% endif %}><i class="ph ph-map-trifold"></i><span>여행</span></a>
-  <a href="{{ '/category/kpop/' | relative_url }}" {% if here == 'kpop' %}aria-current="page"{% endif %}><i class="ph ph-microphone-stage"></i><span>K팝</span></a>
-  <a href="{{ '/category/history/' | relative_url }}" {% if here == 'history' %}aria-current="page"{% endif %}><i class="ph ph-scroll"></i><span>한국사</span></a>
 </nav>
 
 <button class="to-top" id="top" type="button" aria-label="맨 위로"><i class="ph ph-arrow-up"></i></button>
