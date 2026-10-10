@@ -59,11 +59,17 @@ title: 돈·지원금·생활정보 공식 자료 정리
   </div>
 </section>
 
+<section class="shelf wrap-wide">
+  <div class="shelf-h"><h2>모든 글</h2><p>최신순</p></div>
+  <div class="card-grid">{% for p in site.posts limit: 9 %}{% include card.html post=p %}{% endfor %}</div>
+</section>
+
+{% comment %} 주제별 묶음은 글이 3편 이상 모인 주제만 — 1편짜리 칸은 비어 보인다 (10-10) {% endcomment %}
 {% assign keys = "money,life,travel" | split: "," %}
 {% for key in keys %}
 {% assign c = site.data.cats[key] %}
 {% assign ps = site.posts | where: "category", key %}
-{% if ps.size > 0 %}
+{% if ps.size >= 3 %}
 <section class="shelf wrap-wide">
   <div class="shelf-h">
     <h2>{{ c.name }}</h2>
