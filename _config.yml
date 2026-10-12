@@ -12,4 +12,12 @@ defaults:
     values: {layout: post}
   - scope: {path: ""}
     values: {layout: page}
+author:
+  name: 쿼릭 운영자
+  url: https://quorlyk.com/about/
+logo: /assets/img/logo.png
+image: /assets/img/og-default.png
+social:
+  name: 쿼릭 Quorlyk
+  links: []
 email: "quorlyk@daum.net"
