@@ -286,3 +286,47 @@ body { padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom)); }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 @media (min-width: 900px) { .post-grid:has(> .toc[hidden]) { grid-template-columns: minmax(0, 720px); } }
+
+/* ===== 쿼릭 디자인 v4 (2026-10-23 대표님 "애드센스 사이트 디자인 너무 별로") — v3 구조 유지, 덮어쓰기만 =====
+   · 형광 라임 → 코발트 블루 하나(돈·공공정보 사이트는 신뢰가 먼저). --acc 진한 강조(버튼·현재 위치), --hi 옅은 형광펜.
+   · 페이지 한가운데 검은 띠(테마 반전) 제거 → 같은 바탕의 테두리 상자.
+   · 이미지 없는 글: 빈 회색 상자 대신 주제 색 글자 카드(높이 줄임).
+   · 맨 위 검은 날짜 띠 → 옅은 띠, 점 장식 제거. */
+:root { --acc: #2350b8; --acc-ink: #ffffff; --hi: #cfdcfb; --hi-ink: #0e0e0c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --acc: #7aa0ff; --acc-ink: #0b1020; --hi: #1f3463; } }
+:root[data-theme="dark"] { --acc: #7aa0ff; --acc-ink: #0b1020; --hi: #1f3463; }
+
+.dateline { background: var(--wash); color: var(--muted); border-bottom: 1px solid var(--line); }
+.dateline b { color: var(--ink-2); }
+.dateline .dot { display: none; }
+.brand-t i { background: none; color: var(--acc); padding: 0; }
+.nav-desk a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--acc); }
+.tabbar a[aria-current="page"] .ph { background: var(--acc); color: var(--acc-ink); }
+.btn-primary { background: var(--acc); border-color: var(--acc); color: var(--acc-ink); }
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip::before { background: var(--acc); outline: none; border-radius: 2px; }
+.read { border-bottom-color: var(--acc); color: var(--acc); }
+.progress { background: var(--acc); }
+.verified, .note { border-left-color: var(--acc); }
+.verified > .ph { color: var(--acc); }
+.toc a:hover, .toc a.on { box-shadow: inset 0 -3px 0 var(--acc); }
+.ranked a:hover strong, .card:hover h3, .shelf-h a:hover, .more-topics a:hover { text-decoration-color: var(--acc); text-decoration-thickness: 2px; }
+.ranked a::before { color: var(--acc); }
+.prose a { color: var(--acc); }
+
+/* 가운데 띠: 반전 없이 같은 바탕 */
+.band { background: var(--surface); color: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.band .label, .band span { color: var(--muted); }
+.band h2 mark { color: var(--acc); }
+:root[data-theme="dark"] .band h2 mark, :root[data-theme="dark"] .band li::before { color: var(--acc); }
+.band li { border-top-color: var(--line); }
+.band li::before { color: var(--acc); }
+
+/* 이미지 없는 글 카드 */
+.card-img-empty { aspect-ratio: auto; height: 132px; justify-items: start; align-content: end; padding: 18px 20px;
+  background: color-mix(in srgb, var(--acc) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--acc) 16%, var(--line)); }
+.card-img-empty .ph { font-size: 34px; color: var(--acc); }
+.card-img-empty.cat-life { background: color-mix(in srgb, #1f8a70 8%, var(--surface)); border-color: color-mix(in srgb, #1f8a70 18%, var(--line)); }
+.card-img-empty.cat-life .ph { color: #1f8a70; }
+.card-img-empty.cat-travel { background: color-mix(in srgb, #c06a1e 8%, var(--surface)); border-color: color-mix(in srgb, #c06a1e 18%, var(--line)); }
+.card-img-empty.cat-travel .ph { color: #c06a1e; }

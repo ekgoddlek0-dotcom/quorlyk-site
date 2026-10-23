@@ -68,13 +68,16 @@ title: 돈·지원금·생활정보 공식 자료 정리
 {% assign keys = "money,life,travel" | split: "," %}
 {% for key in keys %}
 {% assign c = site.data.cats[key] %}
-{% assign ps = site.posts | where: "category", key %}
+{% assign ps_all = site.posts | where: "category", key %}
+{% comment %} 10-23: '모든 글' 9편과 겹치는 글은 주제 묶음에서 뺀다(같은 글이 홈에 3번씩 나오던 것) {% endcomment %}
+{% assign cutoff = site.posts[8].date %}
+{% assign ps = ps_all | where_exp: "p", "p.date < cutoff" %}
 {% if ps.size >= 3 %}
 <section class="shelf wrap-wide">
   <div class="shelf-h">
     <h2>{{ c.name }}</h2>
     <p>{{ c.desc | truncate: 48 }}</p>
-    <a href="{{ '/category/' | append: key | append: '/' | relative_url }}">전체 {{ ps.size }}편<i class="ph ph-arrow-right"></i></a>
+    <a href="{{ '/category/' | append: key | append: '/' | relative_url }}">전체 {{ ps_all.size }}편<i class="ph ph-arrow-right"></i></a>
   </div>
   <div class="card-grid">{% for p in ps limit: 3 %}{% include card.html post=p %}{% endfor %}</div>
 </section>
