@@ -8,3 +8,5 @@ permalink: /contact/
 - 이메일: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
 
 오류 제보 시 글 주소와 틀린 부분, 근거 자료를 함께 알려 주시면 더 빨리 확인할 수 있습니다.
+
+온라인 셀러라면 [셀러 문의 답변 보조 파일럿](/seller/)도 확인해 보세요.
