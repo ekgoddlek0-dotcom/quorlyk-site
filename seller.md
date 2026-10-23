@@ -40,8 +40,8 @@ document.getElementById('lead').addEventListener('submit', function (e) {
   e.preventDefault();
   var v = function (id) { return document.getElementById(id).value.trim(); };
   var body = '업체/채널: ' + v('biz') + '\n하루 문의 수: ' + v('cnt') + '\n많은 문의: ' + v('pain') + '\n연락처: ' + v('ct');
-  location.href = 'mailto:{{ site.email }}?subject=' + encodeURIComponent('[셀러 문의 보조 파일럿 신청] ' + v('biz')) + '&body=' + encodeURIComponent(body);
-  document.getElementById('leadMsg').textContent = '메일 앱이 열렸다면 그 메일을 보내 주셔야 신청이 완료됩니다. 메일 앱이 없으면 {{ site.email }} 로 위 내용을 보내 주세요.';
+  location.href = 'mailto:moveworksai@daum.net?subject=' + encodeURIComponent('[셀러 문의 보조 파일럿 신청] ' + v('biz')) + '&body=' + encodeURIComponent(body);
+  document.getElementById('leadMsg').textContent = '메일 앱이 열렸다면 그 메일을 보내 주셔야 신청이 완료됩니다. 메일 앱이 없으면 moveworksai@daum.net 로 위 내용을 보내 주세요.';
 });
 </script>
 
