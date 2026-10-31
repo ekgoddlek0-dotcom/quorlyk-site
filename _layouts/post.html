@@ -47,6 +47,8 @@ layout: default
       <button type="button" class="btn" id="share"><i class="ph ph-share-network"></i>공유하기</button>
     </div>
 
+    <a class="verified" href="https://quorlyk.substack.com/subscribe" rel="noopener"><i class="ph ph-envelope-simple"></i><span><b>매주 토요일, 이번 주 바뀐 지원금·세금 정보를 메일로 받아 보세요.</b> 무료이고 언제든 수신거부할 수 있어요.</span></a>
+
     {% assign rel = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" %}
     {% assign more = site.posts | where_exp: "p", "p.category != page.category" %}
     <section class="related" aria-label="함께 보면 좋은 글">
