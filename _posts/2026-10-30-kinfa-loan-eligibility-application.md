@@ -3,8 +3,8 @@ title: "서민금융진흥원 대출은 누가 받을 수 있나요? 상품별 �
 category: money
 image: /assets/img/kinfa-loan-eligibility-application.webp
 image_h: 900
-image_alt: "책상 위 대출 신청 서류와 계산기"
-image_credit: "AI로 만든 이미지 (글 내용 이해를 돕는 예시 사진)"
+image_alt: "책상 위 대출 신청 서류와 계산기 (AI로 만든 그림)"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "서민금융진흥원 대출을 찾는 저소득·저신용자, 청년, 자영업자를 위해 햇살론과 미소금융 등의 자격, 한도, 신청 경로를 정리했습니다."
 description: "서민금융진흥원 대출은 소득과 신용점수, 나이, 자금 용도에 따라 상품이 다릅니다. 햇살론일반·유스, 미소금융 운영자금, 불법사금융예방대출의 조건과 신청 방법을 확인합니다."
 sources:

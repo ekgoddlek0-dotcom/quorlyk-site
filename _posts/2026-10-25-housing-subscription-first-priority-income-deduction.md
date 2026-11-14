@@ -3,8 +3,8 @@ title: "주택청약종합저축 1순위 조건과 소득공제 받는 방법: �
 category: money
 image: /assets/img/housing-subscription-first-priority-income-deduction.webp
 image_h: 900
-image_alt: "한국의 아파트 건물 외관을 올려다본 모습입니다."
-image_credit: "AI로 만든 이미지 (글 내용 이해를 돕는 예시 사진)"
+image_alt: "한국의 아파트 건물 외관을 올려다본 모습입니다 (AI로 만든 그림)"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "청약통장에 300만원이 있어도 1순위와 소득공제가 모두 보장되지는 않습니다. 국민·민영주택별 가입기간과 납입 요건, 총급여 7천만원 이하 근로자의 공제 조건, 무주택확인서 제출 방법을 정리합니다."
 description: "주택청약종합저축 1순위는 국민주택의 납입인정회차와 민영주택의 지역·면적별 예치금으로 나누어 확인해야 합니다. 연 300만원 납입액의 40%를 소득공제받는 대상과 신청처, 2026년 납입분 무주택확인서 제출기한을 안내합니다."
 sources:

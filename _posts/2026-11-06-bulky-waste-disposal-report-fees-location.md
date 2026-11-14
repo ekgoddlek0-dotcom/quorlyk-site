@@ -3,8 +3,8 @@ title: "대형폐기물 버리는 법: 신고 방법·수수료·배출 장소 �
 category: life
 image: /assets/img/bulky-waste-disposal-report-fees-location.webp
 image_h: 900
-image_alt: "배출을 위해 건물 밖에 놓인 나무 의자."
-image_credit: "AI로 만든 이미지 (글 내용 이해를 돕는 예시 사진)"
+image_alt: "배출을 위해 건물 밖에 놓인 나무 의자 (AI로 만든 그림)"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "침대와 의자 등 대형폐기물은 관할 지자체에 신고하고 품목별 수수료를 낸 뒤 안내받은 장소에 배출합니다. 신청 순서와 지역별 차이를 확인합니다."
 description: "대형폐기물 신고부터 수수료 결제, 신고필증 부착과 배출 장소 확인까지 살펴봅니다. 인천 부평구의 매트리스 수수료와 폐가전 무상수거도 안내합니다."
 sources:

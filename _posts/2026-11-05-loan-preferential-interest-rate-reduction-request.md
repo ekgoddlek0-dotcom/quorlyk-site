@@ -3,8 +3,8 @@ title: "대출 우대금리란? 이자 줄이는 적용 조건과 금리인하�
 category: money
 image: /assets/img/loan-preferential-interest-rate-reduction-request.webp
 image_h: 900
-image_alt: "책상 위 대출 서류 옆에 계산기가 놓여 있는 모습"
-image_credit: "AI로 만든 이미지 (글 내용 이해를 돕는 예시 사진)"
+image_alt: "책상 위 대출 서류 옆에 계산기가 놓여 있는 모습 (AI로 만든 그림)"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "대출 이자를 줄일 때 확인할 우대금리 조건과 금리인하요구권의 차이를 설명합니다. 신청 대상, 금융회사별 신청 절차와 심사 결과 확인 방법도 살펴봅니다."
 description: "대출 우대금리는 어떤 조건에서 적용되고, 취업·승진이나 신용점수 상승 후 금리인하요구권은 어떻게 신청할까요? 대출금리 산정내역서 확인부터 증빙자료 제출과 결과 통보까지 안내합니다."
 sources:

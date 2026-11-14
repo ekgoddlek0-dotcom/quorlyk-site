@@ -3,8 +3,8 @@ title: "오늘날씨, 기상청 시간별 날씨 보는 법: 강수확률·강�
 category: life
 image: /assets/img/kma-hourly-weather-rain-probability-feels-like-temperature.webp
 image_h: 900
-image_alt: "가을날 창문에 맺힌 빗방울과 창밖의 흐린 하늘입니다."
-image_credit: "AI로 만든 이미지 (글 내용 이해를 돕는 예시 사진)"
+image_alt: "가을날 창문에 맺힌 빗방울과 창밖의 흐린 하늘입니다 (AI로 만든 그림)"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "오늘날씨에서 강수확률과 강수량은 서로 다른 정보입니다. 기상청 날씨누리에서 지역과 시간 간격을 선택하는 순서, 강수량의 시간 범위, 체감온도를 함께 확인하는 방법을 정리했습니다."
 description: "기상청 시간별 날씨를 보고 우산과 겉옷을 준비하려면 무엇부터 확인해야 할까요? 날씨누리 지역 검색부터 강수확률·강수량·체감온도의 의미, 정시 기온과 누적 강수량의 차이, 출발 전 확인 순서까지 공식 자료로 설명합니다."
 sources:
