@@ -1,6 +1,10 @@
 ---
 title: "코레일 기차표 예매와 취소 방법: 코레일+ 예약부터 반환 수수료까지"
 category: travel
+image: /assets/img/korail-train-ticket-booking-refund-fees.webp
+image_h: 804
+image_alt: "코레일 기차표 예매와 취소 방법: 코레일+ 예약부터 반환 수수료까지 대표 이미지"
+image_credit: "Jerrykim306, Public domain (위키미디어 공용)"
 summary: "코레일+에서 기차표를 예매하고 출발 전후에 반환하는 방법을 알아봅니다. 결제 직후 위약금 면제 조건과 일반 승차권 수수료 확인 방법도 안내합니다."
 description: "코레일 승차권을 어디서 예약하고 언제 취소해야 하는지, 결제 직후 반환 위약금 면제 조건과 열차 출발 후 역 창구 반환 방법을 확인합니다."
 sources:

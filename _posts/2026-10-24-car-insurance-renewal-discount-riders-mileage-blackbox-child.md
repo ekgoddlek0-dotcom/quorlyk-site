@@ -1,6 +1,10 @@
 ---
 title: "자동차 보험 갱신 전 할인 특약 정리: 마일리지·블랙박스·자녀 할인 조건과 확인 방법"
 category: life
+image: /assets/img/car-insurance-renewal-discount-riders-mileage-blackbox-child.webp
+image_h: 900
+image_alt: "자동차 보험 갱신 전 할인 특약 정리: 마일리지·블랙박스·자녀 할인 조건과 확인 방법 대표 이미지"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "자동차 보험을 갱신하기 전에 마일리지·블랙박스·자녀 할인 특약이 무엇인지, 누가 받을 수 있는지, 서류는 어떻게 내는지 손해보험협회 공시 기준으로 정리했습니다."
 description: "자동차 보험을 갱신할 때 빠뜨리기 쉬운 마일리지·블랙박스·자녀 할인 특약의 가입 조건, 주행거리 사진 제출 방법, 보험사별 할인율 차이와 비교하는 곳을 손해보험협회·정책브리핑 자료로 정리했습니다."
 sources:
