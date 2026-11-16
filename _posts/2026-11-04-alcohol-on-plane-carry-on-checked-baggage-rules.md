@@ -1,6 +1,10 @@
 ---
 title: "비행기에 술 가져가도 되나요? 기내·위탁 반입 기준과 음주 규정"
 category: travel
+image: /assets/img/alcohol-on-plane-carry-on-checked-baggage-rules.webp
+image_h: 1200
+image_alt: "인천국제공항 출국장 면세 구역"
+image_credit: "Kanchi1979, CC BY 2.5 (위키미디어 공용)"
 summary: "비행기에 가져갈 수 있는 술도 좌석에서 마음대로 마실 수는 없습니다. 도수별 반입 기준, 국제선의 100mL 용기 제한, 면세점 술의 봉인 조건과 환승 주의사항을 공식 안내로 확인합니다."
 description: "비행기 술 반입은 알코올 도수와 용량, 기내·위탁 여부에 따라 달라집니다. 24%·70% 경계와 1인당 5L 기준, 국제선 액체류 제한, 면세품 포장 조건, 가져온 술의 기내 음주 규정을 구분해 안내합니다."
 sources:

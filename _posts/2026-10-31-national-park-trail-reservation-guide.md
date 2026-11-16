@@ -1,6 +1,10 @@
 ---
 title: "국립공원 탐방로 예약 방법: 예약 대상·신청 시기·취소 규정"
 category: travel
+image: /assets/img/national-park-trail-reservation-guide.webp
+image_h: 1067
+image_alt: "북한산국립공원 능선과 인수봉"
+image_credit: "Jo Hanshin, CC0 (위키미디어 공용)"
 summary: "국립공원 예약제 탐방로를 확인하고 신청하는 순서와 예약 마감, 취소 및 예약 부도 기준을 정리했습니다."
 description: "북한산 우이령과 지리산 노고단 등 예약제 탐방로의 운영 방식, 인터넷·전화 예약 방법, 신청 마감과 취소 시 주의사항을 공식 안내를 바탕으로 정리했습니다."
 sources:

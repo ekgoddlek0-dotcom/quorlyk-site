@@ -1,6 +1,10 @@
 ---
 title: "휠체어·유아차로 가기 좋은 열린관광지 찾는 법: 이동 동선과 편의시설 확인"
 category: travel
+image: /assets/img/accessible-tourism-wheelchair-stroller-guide.webp
+image_h: 1067
+image_alt: "서울 시내 저상버스"
+image_credit: "byeangel from Tsingtao, China, CC BY-SA 2.0 (위키미디어 공용)"
 summary: "열린관광 모두의 여행에서 휠체어·유아차 이용에 필요한 동선과 편의시설을 확인하는 순서와 방문 전 문의할 항목을 안내합니다."
 description: "휠체어와 유아차를 이용할 때 열린관광지의 주차장, 경사로, 화장실, 대여소를 확인하는 방법을 살펴봅니다. 연안부두 해양광장과 불갑사 관광지의 실제 안내도 비교합니다."
 sources:

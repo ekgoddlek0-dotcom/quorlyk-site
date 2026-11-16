@@ -1,6 +1,10 @@
 ---
 title: "전국 축제 일정 찾는 법: 11월 지역·날짜별 행사와 방문 전 확인사항"
 category: travel
+image: /assets/img/korea-festival-schedule-by-region-date.webp
+image_h: 925
+image_alt: "진주 남강에 띄운 유등 축제 전경"
+image_credit: "Bernard Gagnon, CC0 (위키미디어 공용)"
 summary: "전국 축제 일정을 지역과 날짜로 찾는 순서와 행사 기간·프로그램 시간·요금·예약 여부를 확인하는 방법을 안내합니다."
 description: "2026년 11월 축제를 찾고 있다면 문화체육관광부와 한국관광공사에서 지역별 행사를 살펴보세요. 방문할 날짜의 프로그램, 입장료와 별도 체험비, 예약 및 교통 안내를 확인하는 순서도 정리했습니다."
 sources:

@@ -15,7 +15,7 @@ sources:
   - name: "정부24: 지방세 납세증명서 발급"
     url: "https://m.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000056&HighCtgCD=A09002"
   - name: "국가법령정보센터: 지방세징수법 시행령 제7조"
-    url: "https://www.law.go.kr/LSW/lsSideInfoP.do?ancYnChk=0&docCls=jo&efYd=20260205&joBrNo=00&joNo=0007&lsiSeq=283265&urlMode=lsScJoRltInfoR"
+    url: "https://www.law.go.kr/법령/지방세징수법시행령"
   - name: "김포시: 지방세 증명서 발급 민원사무편람"
     url: "https://m1.gimpo.go.kr/portal/selectBbsNttView.do?bbsNo=303&deleteAt=N&key=2677&nttNo=744470&pageIndex=6&pageUnit=10&searchCnd=all"
 ---
@@ -71,7 +71,7 @@ sources:
 
 국세 납세증명서는 발급일부터 30일이 기본이지만 고지된 국세가 있으면 더 짧아질 수 있습니다. 손택스는 이 경우 My홈택스에서 고지내역을 확인하도록 안내합니다. 체납세금을 납부했는데도 발급되지 않는다면 관할 세무서에 문의해야 합니다. [손택스 납세증명서 도움말](https://mob.tbht.hometax.go.kr/jsonAction.do?actionId=UTBRDAAA05F001)
 
-지방세는 발급 당시 고지된 세금이 있거나 법에서 정한 납부기한이 발급일부터 30일 안에 도래하는 경우 등에 해당 납부기한까지 유효기간을 줄일 수 있습니다. 단축한 경우에는 증명서에 기간과 사유를 명시하도록 규정되어 있습니다. 따라서 발급일에 30일을 더해 계산하기보다 문서에 표시된 날짜를 기준으로 확인해야 합니다. [지방세징수법 시행령 제7조](https://www.law.go.kr/LSW/lsSideInfoP.do?ancYnChk=0&docCls=jo&efYd=20260205&joBrNo=00&joNo=0007&lsiSeq=283265&urlMode=lsScJoRltInfoR)
+지방세는 발급 당시 고지된 세금이 있거나 법에서 정한 납부기한이 발급일부터 30일 안에 도래하는 경우 등에 해당 납부기한까지 유효기간을 줄일 수 있습니다. 단축한 경우에는 증명서에 기간과 사유를 명시하도록 규정되어 있습니다. 따라서 발급일에 30일을 더해 계산하기보다 문서에 표시된 날짜를 기준으로 확인해야 합니다. [지방세징수법 시행령 제7조](https://www.law.go.kr/법령/지방세징수법시행령)
 
 또한 국세청은 자진신고 세목의 자진납부하지 않은 금액까지 납세증명서가 증명하는 것은 아니라고 안내합니다. 증명서를 받았다는 사실만으로 모든 미납 가능성이 사라졌다고 판단해서는 안 됩니다. 임대차 관련 서류를 준비 중이라면 이사 후 절차는 [전입신고와 확정일자 온라인 신청 순서](/move-in-report-fixed-date-online/)에서 별도로 확인할 수 있습니다.
 
