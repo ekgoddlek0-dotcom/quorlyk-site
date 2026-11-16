@@ -2,9 +2,9 @@
 title: "2026 출산전후휴가 급여·배우자 출산휴가 급여: 대상·금액·기간·신청처"
 category: money
 image: /assets/img/maternity-spouse-childbirth-leave-benefits.webp
-image_h: 1980
-image_alt: "출산을 앞두고 준비한 아기 요람의 모습입니다."
-image_credit: "William-Adolphe Bouguereau, Public domain (위키미디어 공용)"
+image_h: 900
+image_alt: "2026 출산전후휴가 급여·배우자 출산휴가 급여: 대상·금액·기간·신청처 대표 이미지"
+image_credit: "AI로 만든 그림입니다. 실제 장소나 물건을 찍은 사진이 아닙니다."
 summary: "출산을 앞둔 근로자가 휴가 중 소득을 확인하려면 회사의 지급분과 고용보험 급여를 나눠 봐야 합니다. 출산전후휴가 급여는 30일 기준 최대 220만원, 배우자 출산휴가 급여는 20일 기준 최대 168만4,210원입니다. 대상과 신청 기한을 비교합니다."
 description: "2026년 출산전후휴가와 배우자 출산휴가의 대상, 휴가 기간, 고용보험 급여 상한액과 신청처를 확인합니다. 피보험 단위기간 180일 조건, 우선지원대상기업 여부, 회사의 임금 지급 의무, 고용24 신청과 배우자 휴가 사용 기한을 구분해 안내합니다."
 sources:
