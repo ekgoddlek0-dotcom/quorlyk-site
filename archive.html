@@ -1,0 +1,22 @@
+---
+layout: page
+description: "쿼릭에 올라온 글 전체 목록입니다. 돈·지원금, 생활정보, 여행 글을 연도와 날짜순으로 모았습니다."
+title: 모든 글
+permalink: /archive/
+---
+지금까지 올린 글 <strong>{{ site.posts.size }}편</strong>입니다. 최신 글부터 날짜순으로 정리했고, 주제별로 보고 싶다면 <a href="/category/money/">돈·지원금</a>, <a href="/category/life/">생활정보</a>, <a href="/category/travel/">여행</a>에서 모아 볼 수 있습니다. 글마다 확인한 날짜와 공식 출처를 적어 두었으니, 금액과 기간은 읽는 시점에 원문에서 다시 확인하세요.
+
+{% assign current_year = "" %}
+{% for p in site.posts %}
+{% assign y = p.date | date: '%Y' %}
+{% if y != current_year %}
+{% unless forloop.first %}</ul>{% endunless %}
+<h2>{{ y }}년</h2>
+<ul>
+{% assign current_year = y %}
+{% endif %}
+<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span>{{ p.date | date: '%m.%d' }} · {{ site.data.cats[p.category].name }}</span></li>
+{% if forloop.last %}</ul>{% endif %}
+{% endfor %}
+
+글을 만드는 방식과 오류를 고치는 절차는 <a href="/editorial/">편집 원칙</a>에, 문의와 오류 제보는 <a href="/contact/">문의 페이지</a>에 안내해 두었습니다.

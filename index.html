@@ -60,7 +60,7 @@ title: 돈·지원금·생활정보 공식 자료 정리
 </section>
 
 <section class="shelf wrap-wide">
-  <div class="shelf-h"><h2>모든 글</h2><p>최신순</p></div>
+  <div class="shelf-h"><h2>모든 글</h2><p>최신순</p><a href="{{ '/archive/' | relative_url }}">전체 {{ site.posts.size }}편<i class="ph ph-arrow-right"></i></a></div>
   <div class="card-grid">{% for p in site.posts limit: 9 %}{% include card.html post=p %}{% endfor %}</div>
 </section>
 
