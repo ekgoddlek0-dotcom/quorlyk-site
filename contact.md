@@ -5,7 +5,7 @@ permalink: /contact/
 ---
 글의 오류 제보, 내용 문의, 자료 정정 요청, 협업 제안은 아래 메일로 보내 주세요. 확인하는 대로 답변드리며, 보통 3일 안에 회신합니다.
 
-- 이메일: <a href="mailto:{{ site.email }}">{{ site.email }}</a> (quorlyk&#64;daum.net)
+- 이메일: <span>quorlyk<span>@</span>daum.net</span> · <a href="mailto:{{ site.email }}">메일 쓰기</a>
 
 메일 주소는 위와 같습니다. 보내실 때 제목 앞에 `[오류]`, `[문의]`, `[협업]` 중 하나를 붙여 주시면 더 빨리 구분합니다.
 
