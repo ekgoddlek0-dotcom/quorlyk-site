@@ -75,6 +75,6 @@ sources:
 
 확인일은 **2026년 11월 15일**입니다. 메뉴와 사업별 금액·일정은 바뀔 수 있으므로 실제 신청 시 공식 사이트의 최신 안내를 다시 확인해야 합니다. 조회 목록은 신청 후보이며 접수와 심사를 거쳐야 실제 지원 여부가 결정됩니다.
 
-개인 상황에 따라 다르니 공식 기관에서 최종 확인
+개인 상황에 따라 다르니 공식 기관에서 최종 확인하세요.
 
 [정부24 혜택알리미에서 조회하기](https://plus.gov.kr/portal/benefitV2/) · [복지로에서 맞춤형급여안내 확인하기](https://www.bokjiro.go.kr/ssis-tbu/twatza/wmAplyMng/selectWmJoinProcGdnc.do)

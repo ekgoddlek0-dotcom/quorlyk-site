@@ -96,6 +96,6 @@ KCB는 자동화평가에 대한 설명을 요구할 수 있고 평가에 이용
 - 비금융정보 제출은 활용 가능한 방법이지만 상승 폭과 반영 시점을 보장하지 않습니다.
 - 잘못된 기초정보는 확인 자료를 준비해 정정 절차를 문의해야 합니다.
 
-개인 상황에 따라 다르니 공식 기관에서 최종 확인
+개인 상황에 따라 다르니 공식 기관에서 최종 확인하세요.
 
 공식 사이트 안내: [NICE지키미](https://www.credit.co.kr/ib20/mnu/BZWMFPNSC10) · [KCB 올크레딧](https://www.allcredit.co.kr/screen/sc0682112929) · [서민금융진흥원](https://www.kinfa.or.kr/financialLife/onlineFinancialDiagnosis.do)

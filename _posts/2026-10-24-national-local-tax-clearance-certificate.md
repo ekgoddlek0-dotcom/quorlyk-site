@@ -82,6 +82,6 @@ sources:
 - 두 증명서의 발급 수수료는 없으며 온라인 신청은 본인만 가능합니다.
 - 유효기간은 원칙적으로 30일이지만 최종 제출 전에는 증명서에 표시된 만료일을 확인해야 합니다.
 
-개인 상황에 따라 다르니 공식 기관에서 최종 확인
+개인 상황에 따라 다르니 공식 기관에서 최종 확인하세요.
 
 공식 발급 안내: [국세 납세증명서](https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=12100000011&HighCtgCD=&tp_seq=01) · [지방세 납세증명서](https://m.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000056&HighCtgCD=A09002)
