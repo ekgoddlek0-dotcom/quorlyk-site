@@ -330,3 +330,30 @@ body { padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom)); }
 .card-img-empty.cat-life .ph { color: #1f8a70; }
 .card-img-empty.cat-travel { background: color-mix(in srgb, #c06a1e 8%, var(--surface)); border-color: color-mix(in srgb, #c06a1e 18%, var(--line)); }
 .card-img-empty.cat-travel .ph { color: #c06a1e; }
+
+/* ===== 전환 동선 (2026-11-26): 글 하단 뉴스레터·문의, 첫 화면 구독 띠 =====
+   애드센스 재심사를 앞두고 있어 광고처럼 보이는 배너는 넣지 않는다. 신문 지면 같은 실선 상자 하나로만. */
+.cta { margin: 46px 0 0; padding: 24px 22px; display: grid; gap: 22px;
+  background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--ink); border-radius: var(--r-s); }
+.cta .label, .sub-band .label { display: block; margin: 0 0 8px; }
+.cta h2 { margin: 0 0 10px; font-size: 21px; line-height: 1.42; font-weight: 800; letter-spacing: -.03em; }
+.cta p { margin: 0 0 16px; font-size: 15px; line-height: 1.7; color: var(--ink-2); }
+.cta p a { color: var(--ink); text-decoration-color: var(--line-2); }
+.cta p a:hover { text-decoration-color: var(--ink); }
+.cta .cta-fine { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.cta-side { padding-top: 18px; border-top: 1px solid var(--line); }
+.cta-side p { font-size: 14.5px; }
+.cta-link { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
+.cta-link:hover { text-decoration: underline; text-decoration-color: var(--acc); text-decoration-thickness: 2px; }
+
+.sub-band { margin: 56px auto 0; padding: 26px 22px; display: grid; gap: 18px; align-items: center;
+  background: color-mix(in srgb, var(--acc) 5%, var(--surface)); border: 1px solid color-mix(in srgb, var(--acc) 18%, var(--line)); border-radius: var(--r); }
+.sub-band h2 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.35; font-weight: 800; letter-spacing: -.035em; }
+.sub-band p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); }
+.sub-band .btn { justify-self: start; }
+
+@media (min-width: 900px) {
+  .cta { grid-template-columns: 1.55fr 1fr; gap: 30px; padding: 28px 26px; }
+  .cta-side { padding: 0 0 0 24px; border-top: 0; border-left: 1px solid var(--line); }
+  .sub-band { grid-template-columns: 1fr auto; margin-top: 72px; padding: 30px 32px; }
+}

@@ -21,3 +21,16 @@ social:
   name: 쿼릭 Quorlyk
   links: []
 email: "quorlyk@daum.net"
+
+# 측정 (2026-11-26) — 값이 비어 있으면 _includes/analytics.html이 아무것도 넣지 않는다.
+# GA4 측정 ID를 여기에 넣으면 모든 페이지에 gtag가 들어간다. 예: google_analytics: "G-AB12CD34EF"
+# 넣은 뒤에는 /privacy/ 2항(통계 쿠키)이 함께 바뀌는지 화면에서 확인할 것.
+google_analytics:
+# Search Console 'HTML 태그' 방식 인증 코드(content="..." 안의 값). 넣으면 <meta>가 들어간다.
+google_site_verification:
+
+# 전환 동선 링크 (2026-11-26 실제 응답 확인한 주소만. 바뀌면 여기만 고치면 글·바닥글·문의에 모두 반영)
+newsletter_name: "쿼릭 생활정보"
+newsletter_url: "https://quorlyk.substack.com/subscribe"
+newsletter_archive: "https://quorlyk.substack.com/archive"
+kmong_url: "https://kmong.com/gig/845178"

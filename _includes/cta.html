@@ -1,0 +1,18 @@
+{%- comment -%}
+글 하단 전환 동선 (2026-11-26): 무료 뉴스레터 구독 + 오류 제보·문의.
+주소는 _config.yml의 newsletter_url·newsletter_archive에서만 가져온다. 확인하지 않은 주소를 여기에 직접 쓰지 말 것.
+{%- endcomment -%}
+<aside class="cta" aria-label="뉴스레터 구독과 문의">
+  <div class="cta-main">
+    <p class="label">무료 뉴스레터 · {{ site.newsletter_name | default: "쿼릭 생활정보" }}</p>
+    <h2>이번 주에 바뀐 돈·생활 정보만 골라 받아 보세요</h2>
+    <p>지원금·세금·대출·생활비에서 그 주에 실제로 달라진 것만 정리해 매주 토요일 보냅니다. 지난 호는 <a href="{{ site.newsletter_archive | default: site.newsletter_url }}" rel="noopener">보관함</a>에서 먼저 볼 수 있습니다.</p>
+    {% if site.newsletter_url %}<a class="btn btn-primary" href="{{ site.newsletter_url }}" rel="noopener">무료로 구독하기<i class="ph ph-arrow-right"></i></a>{% endif %}
+    <p class="cta-fine">메일 주소만 받습니다. 광고 메일은 보내지 않고, 언제든 수신을 그만둘 수 있습니다.</p>
+  </div>
+  <div class="cta-side">
+    <p class="label">이 글이 틀렸다면</p>
+    <p>금액이나 기간이 바뀌었는데 글이 그대로라면 알려 주세요. 공식 자료와 대조해 고치고 수정 날짜를 남깁니다.</p>
+    <a class="cta-link" href="{{ '/contact/' | relative_url }}">오류 제보·문의하기<i class="ph ph-arrow-up-right"></i></a>
+  </div>
+</aside>

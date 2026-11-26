@@ -84,3 +84,15 @@ title: 돈·지원금·생활정보 공식 자료 정리
 {% endif %}
 {% endfor %}
 
+{% comment %} 무료 뉴스레터 동선 (2026-11-26): 첫 화면에서 바로 구독으로 이어지게. 주소는 _config.yml에서 가져온다. {% endcomment %}
+{% if site.newsletter_url %}
+<section class="sub-band wrap-wide" aria-label="주간 뉴스레터">
+  <div>
+    <p class="label">무료 뉴스레터 · {{ site.newsletter_name | default: "쿼릭 생활정보" }}</p>
+    <h2>매주 토요일, 이번 주에 바뀐 돈·생활 정보만.</h2>
+    <p>지원금·세금·대출·생활비에서 그 주에 실제로 달라진 것만 골라 정리해 보냅니다. 지난 호는 <a href="{{ site.newsletter_archive | default: site.newsletter_url }}" rel="noopener">보관함</a>에서 볼 수 있습니다.</p>
+  </div>
+  <a class="btn btn-primary" href="{{ site.newsletter_url }}" rel="noopener">무료로 구독하기<i class="ph ph-arrow-right"></i></a>
+</section>
+{% endif %}
+
